@@ -34,7 +34,11 @@ public class WebServer implements Runnable {
             e.printStackTrace();
         }
         while (true) {
-            threadPoolExecutor.execute(new Thread(new RequestHandler()));
+            try {
+                threadPoolExecutor.execute(new Thread(new RequestHandler(server.accept())));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
