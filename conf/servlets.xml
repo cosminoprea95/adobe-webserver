@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servlets>
+	<servlet url="/myweb/reg" className="com.cosmin.servlet.RegServlet"/>
+	<servlet url="/myweb/login" className="com.cosmin.servlet.LoginServlet"/>
+	<servlet url="/myweb/update" className="com.cosmin.servlet.UpdateServlet"/>
+</servlets>
